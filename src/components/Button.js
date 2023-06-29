@@ -11,16 +11,13 @@ export default props => {
   ];
 
   return (
-    <TouchableHighlight style={styles.backgroundTouch} onPress={() => props.onClick(props.label)}>
+    <TouchableHighlight onPress={() => props.onClick(props.label)}>
       <Text style={stylesButton}>{props.label}</Text>
     </TouchableHighlight>
   );
 }
 
 const styles = StyleSheet.create({
-  backgroundTouch: {
-    backgroundColor: 'black',
-  },
   button: {
     fontSize: 40,
     height: (Dimensions.get('window').width / 4) * 0.92,
